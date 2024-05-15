@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>business-2b</title>
+</head>
+<body>
+    <style>
+        :root{
+            --color-1: #00171f;
+            --color-2: #023E82;
+            --color-3: #003459;
+            --color-4: #f0f0f0;
+            --color-5: #9fe2f0;
+
+            --fs-l: 2rem;
+            --fs-m: 1.2rem;
+            --fs-rgl: 1rem;
+            --fs-s: 0.7rem;
+
+            --font-1: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+
+        @media (min-width: 100px) and (max-width: 599px) {
+            :root{
+                --fs-l: 1.4rem;
+                --fs-m: 1.1rem;
+                --fs-rgl: 0.95rem;
+                --fs-s: 0.7rem;
+            }
+
+            html body{
+                margin: 0;
+                width: 100%;
+            }
+
+            body #logo{
+                width: 35%;
+                height: auto;
+            }
+
+            body #content{
+                padding: 0.5em;
+                height: 60vh;
+                grid-template-rows: 60% 30% 10%;
+            }
+            
+        }
+
+        h1, h2, h3{
+            font-weight: 600;
+            color: var(--color-2);
+        }
+
+        h1{font-size: var(--fs-l);}
+        h2{font-size: var(--fs-m);}
+        h3{font-size: var(--fs-m);}
+
+
+        p{
+            font-weight: 300;
+        }
+
+        html{
+            background-color: var(--color-4);
+            /* max-width: 800px; */
+            width: 100%;
+            font-family: var(--font-1);
+        }
+
+        html>*{
+            box-sizing: border-box;
+
+        }
+
+        body{
+            background-color: var(--color-4);
+            width: 80%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        table{
+            /* display: block; */
+            border-collapse: collapse;
+        }
+        td:not(.cover, #content){
+            padding: 0 2em;
+            text-align: left;
+        }
+
+        .cover{
+        }
+
+        .cover img{
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            border: none;
+        }
+
+        #content-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr) );
+            place-items: center;
+            gap: 1em;
+        }
+
+        #content{
+            height: 70vh;;
+            display: grid;
+            grid-template-rows: 50% 40% 10%;
+            grid-template-areas: 
+                "img"
+                "text"
+                "btn";
+        }
+
+        .content-img{
+            grid-area: img;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #content p{
+            grid-area: text;
+            overflow: hidden;
+
+        }
+
+        .b{
+            height: 80vh!important;
+            margin: 2em 0;
+            grid-template-rows: 70% 20% 10%!important;
+        }
+
+        #hero-btn{
+            grid-area: btn;
+            display: block;
+            background-color: var(--color-3);
+            color: var(--color-4);
+            width: auto;
+            height: 2.77em;
+            border: none;
+            border-radius: 1.5em;
+            padding: 0 2em;
+            /* margin: 2em auto; */
+
+            font-size: var(--fs-rgl);
+            font-weight: 500;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+
+        .message p{
+            margin: 4em 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: var(--color-4);
+
+        }
+
+        #footer>*{
+            font-size: var(--fs-s);
+            text-align: center;
+            color: var(--color-4);
+        }
+
+        .footer{
+            background-color: var(--color-2);
+            padding: 2em;
+        }
+
+        /* LOGO */
+
+        #logo-wrapper{
+            /* width: 10em;
+            height: 8em; */
+            display: block;
+            padding: 1em!important;
+            /* margin-inline: auto; */
+
+        }
+
+        #data-logo{
+            display: block; 
+        }    
+        #logo{
+            width: 20%;
+            height: auto;
+        }
+
+        /* ICONS */
+
+        .icon{
+            width: 3.7em;
+            height: 100%;
+        }
+
+        .n{
+            margin-left: 4em;
+        }
+
+    </style>
+    <table>
+        <tr id="logo-wrapper" class="footer">
+            <td id="data-logo">
+                <img src="icon/logoipsum.svg" id="logo"></td>
+        </tr>
+        <tr id="cover">
+            <td class="cover">
+                <img src="img/business-hands.jpg" width="1920" height="2880" alt="Group of business workers standing with hands together doing symbol at the office">
+            </td>
+        </tr>
+        <tr id="message1"  class="message">
+            <td><p>Hi [Customer's Name],<br><br>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia exercitationem atque molestias quaerat excepturi obcaecati rem praesentium.</p></td>
+        </tr>
+        <tr id="content-container">
+            <td class="content" id="content">
+                <img src="img/business-1.jpg" class="content-img" alt="" width="3456" height="5184">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, sequi harum rem magni optio ut dolore. Exercitationem ab eius nam eveniet sed consectetur rerum recusandae!</p>
+                <a href="#"><button id="hero-btn">get started</button></a>
+            </td>
+            <td class="content" id="content">
+                <img src="img/business-2.jpg" class="content-img" alt="">
+                <p>Quaerat, ipsam dolore. Sed corrupti ipsum ducimus exercitationem odit voluptatibus saepe blanditiis id numquam officia, tempore esse veniam, accusantium quas facere vitae, minima veritatis sequi soluta modi ratione consectetur odio. </p>
+                <a href="#"><button id="hero-btn">download now</button></a>
+            </td>
+        <tr>
+            <td class="content b" colspan="2" id="content">
+                <img src="img/business-3.jpg" class="content-img" alt="">
+                <p>Ipsum, sed exercitationem?Obcaecati quam minima magni nobis placeat suscipit accusantium libero impedit aspernatur enim. Maxime suscipit iusto dolorum atque illum temporibus enim adipisci velit voluptates iure rem.</p>
+                <a href="#"><button id="hero-btn">request a demo</button></a>
+            </td>
+        </tr>
+        <tr id="content-container">
+            <td class="content" id="content">
+                <img src="img/business-4.jpg" class="content-img" alt="">
+                <p>eiciendis aspernatur deserunt dolorem, reprehenderit labore provident, natus dolore vitae molestias doloribus? </p>
+                <a href="#"><button id="hero-btn">get started</button></a>
+            </td>
+            <td class="content" id="content">
+                <img src="img/business-1.jpg" class="content-img" alt="">
+                <p>Assumenda sequi perspiciatis soluta provident corrupti. Perferendis ullam quas aspernatur unde qui esse fuga ducimus enim perspiciatis odit, veniam dolorum reprehenderit harum illum pariatur officiis in sit quos quam quidem tempore voluptatibus culpa doloremque!</p>
+                <a href="#"><button id="hero-btn">contact us</button></a>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr id="message2" class="message">
+            <td><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus soluta porro dicta adipisci. Ipsum necessitatibus quae minus et eveniet ullam.<br><br>  Impedit autem illum.</p></td>
+        </tr>
+        <tr>
+            <td id="footer" class="footer">
+                <p>
+                    Connect with us:<br><br>
+                    <a href="#"><img src="icon/square-facebook.svg" alt="Facebook" class="icon"></a>
+                    <a href="#"><img src="icon/linkedin.svg" alt="LinkedIn" class="icon n"></a>
+                    <a href="#"><img src="icon/instagram.svg" alt="Instagram" class="icon n"></a>
+                </p>
+                <p>
+                    <strong>Logo Inc.</strong><br>
+                    123 Main Street<br>
+                    Anytown, USA 12345<br>
+                    Phone: (123) 456-7890<br>
+                    Email: <a href="mailto:info@logo.com">info@logo.com</a><br>
+                    Website: <a href="http://www.logo.com">www.logo.com</a>
+                </p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
