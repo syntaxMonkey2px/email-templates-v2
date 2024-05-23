@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>enterprise-1a</title>
 </head>
 <body>
     <style>
@@ -25,15 +25,19 @@
 
         @media (min-width: 100px) and (max-width: 599px) {
             :root{
-                --fs-l: 1.4rem;
+                --fs-l: 1.35rem;
                 --fs-m: 1.1rem;
-                --fs-rgl: 0.95rem;
+                --fs-rgl: 0.88rem;
                 --fs-s: 0.7rem;
             }
 
             html body{
                 margin: 0;
                 width: 100%;
+            }
+
+            html body>*{
+                line-height: 1.2;
             }
 
             body #logo{
@@ -55,6 +59,7 @@
 
         p{
             font-weight: 300;
+            font-size: var(--fs-rgl);
         }
 
         html{
@@ -85,6 +90,23 @@
             margin-top: 2em;
         }
 
+        #order{
+            background-color: var(--color-5);
+            filter:grayscale(0.2)
+        }
+
+        #order ol{
+            margin-inline: auto;
+            font-size: var(--fs-rgl);
+            margin-bottom: 2em;
+        }
+
+        #order li{
+            text-transform: capitalize;
+            text-align: left!important;
+            line-height: 1.5;
+        }
+
         #track-btn{
             display: block;
             background-color: var(--color-3);
@@ -94,7 +116,7 @@
             border: none;
             border-radius: 1.5em;
             padding: 0 2em;
-            margin: 2em auto;
+            margin: 1em auto;
 
             font-size: var(--fs-rgl);
             font-weight: 500;
@@ -170,17 +192,13 @@
         <tr id="order">
             <td><h3>Order Summary</h3>
                 <ol>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>lorem ipsum</li>
+                    <li>dolor sit amet consectetur</li>
+                    <li>adipisicing elit</li>
+                    <li>Natus exercitationem deserunt doloremque</li>
                 </ol>
-            </td>
-        </tr>
-        <tr>
-            <td><a href="#">
-                <button id="track-btn">Track your order</button></a></td>
-        </tr>
+            <a href="#">
+                <button id="track-btn">Track your order</button></a>
         <tr id="message2">
             <td><p>Your order is being processed, and we'll notify you once it's shipped. If you have any questions, feel free to reach out to us. <br><br> Thanks again for choosing [Your Company Name]!</p></td>
         </tr>

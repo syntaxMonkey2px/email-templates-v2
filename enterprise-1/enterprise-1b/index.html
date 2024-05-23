@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>business-2b</title>
+    <title>enterprise-1b</title>
 </head>
 <body>
     <style>
@@ -16,7 +16,7 @@
 
             --fs-l: 2rem;
             --fs-m: 1.2rem;
-            --fs-rgl: 1rem;
+            --fs-rgl: 0.96rem;
             --fs-s: 0.7rem;
 
             --font-1: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -41,12 +41,22 @@
                 height: auto;
             }
 
-            body #content{
+            body #content, b{
                 padding: 0.5em;
                 height: 60vh;
                 grid-template-rows: 60% 30% 10%;
             }
-            
+
+            body .content-btn{
+            display: block;
+            padding: 0 1em;
+            }
+        
+            body b .content-btn{
+            display: block;
+            padding: 0 1em;
+        }
+        
         }
 
         h1, h2, h3{
@@ -61,6 +71,7 @@
 
         p{
             font-weight: 300;
+            font-size: var(--fs-rgl);
         }
 
         html{
@@ -72,7 +83,6 @@
 
         html>*{
             box-sizing: border-box;
-
         }
 
         body{
@@ -86,19 +96,20 @@
             /* display: block; */
             border-collapse: collapse;
         }
-        td:not(.cover, #content){
+        td:not(#content){
             padding: 0 2em;
             text-align: left;
         }
 
         .cover{
+            padding: 0!important;
         }
 
-        .cover img{
+        #cover img{
+            display: block;
             width: 100%;
-            height: 60vh;
+            height: 70vh;
             object-fit: cover;
-            border: none;
         }
 
         #content-container{
@@ -109,13 +120,18 @@
         }
 
         #content{
+            box-shadow: 0 0 .5em 0 var(--color-5);
             height: 70vh;;
             display: grid;
-            grid-template-rows: 50% 40% 10%;
+            grid-template-rows: 50% 35% 15%;
             grid-template-areas: 
                 "img"
                 "text"
                 "btn";
+        }
+
+        #content tr{
+            margin: 1em 0
         }
 
         .content-img{
@@ -123,13 +139,16 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            /* box-shadow: 0 0 .4em 0 var(--color-1); */
         }
 
         #content p{
             grid-area: text;
             overflow: hidden;
-
+            padding: 0 1em;
         }
+
+        /* CENTER CONTENT */
 
         .b{
             height: 80vh!important;
@@ -137,9 +156,20 @@
             grid-template-rows: 70% 20% 10%!important;
         }
 
+        .b .content-btn{
+            display: block;
+            padding: 0 1em;
+        }
+
+        .content-btn{
+            display: block;
+            padding: 1em 1em;
+        }
+
         #hero-btn{
             grid-area: btn;
             display: block;
+            position: relative;
             background-color: var(--color-3);
             color: var(--color-4);
             width: auto;
@@ -147,7 +177,6 @@
             border: none;
             border-radius: 1.5em;
             padding: 0 2em;
-            /* margin: 2em auto; */
 
             font-size: var(--fs-rgl);
             font-weight: 500;
@@ -207,7 +236,7 @@
         }
 
     </style>
-    <table>
+    <table >
         <tr id="logo-wrapper" class="footer">
             <td id="data-logo">
                 <img src="icon/logoipsum.svg" id="logo"></td>
@@ -225,30 +254,30 @@
             <td class="content" id="content">
                 <img src="img/business-1.jpg" class="content-img" alt="" width="3456" height="5184">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, sequi harum rem magni optio ut dolore. Exercitationem ab eius nam eveniet sed consectetur rerum recusandae!</p>
-                <a href="#"><button id="hero-btn">get started</button></a>
+                <span class="content-btn"><a href="#"><button id="hero-btn">get started</button></a></span>
             </td>
             <td class="content" id="content">
                 <img src="img/business-2.jpg" class="content-img" alt="">
                 <p>Quaerat, ipsam dolore. Sed corrupti ipsum ducimus exercitationem odit voluptatibus saepe blanditiis id numquam officia, tempore esse veniam, accusantium quas facere vitae, minima veritatis sequi soluta modi ratione consectetur odio. </p>
-                <a href="#"><button id="hero-btn">download now</button></a>
+                <span class="content-btn"><a href="#"><button id="hero-btn" class="content-btn">download now</button></a></span>
             </td>
         <tr>
             <td class="content b" colspan="2" id="content">
                 <img src="img/business-3.jpg" class="content-img" alt="">
                 <p>Ipsum, sed exercitationem?Obcaecati quam minima magni nobis placeat suscipit accusantium libero impedit aspernatur enim. Maxime suscipit iusto dolorum atque illum temporibus enim adipisci velit voluptates iure rem.</p>
-                <a href="#"><button id="hero-btn">request a demo</button></a>
+                <span class="content-btn"><a href="#"><button id="hero-btn">request a demo</button></a></span>
             </td>
         </tr>
         <tr id="content-container">
             <td class="content" id="content">
                 <img src="img/business-4.jpg" class="content-img" alt="">
                 <p>eiciendis aspernatur deserunt dolorem, reprehenderit labore provident, natus dolore vitae molestias doloribus? </p>
-                <a href="#"><button id="hero-btn">get started</button></a>
+                <span class="content-btn"><a href="#"><button id="hero-btn">get started</button></a></span>
             </td>
             <td class="content" id="content">
                 <img src="img/business-1.jpg" class="content-img" alt="">
                 <p>Assumenda sequi perspiciatis soluta provident corrupti. Perferendis ullam quas aspernatur unde qui esse fuga ducimus enim perspiciatis odit, veniam dolorum reprehenderit harum illum pariatur officiis in sit quos quam quidem tempore voluptatibus culpa doloremque!</p>
-                <a href="#"><button id="hero-btn">contact us</button></a>
+                <span class="content-btn"><a href="#"><button id="hero-btn">contact us</button></a></span>
             </td>
         </tr>
         <tr>

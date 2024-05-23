@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>enterprise-2a</title>
 </head>
 <body>
     <style>
@@ -19,6 +19,8 @@
             --fs-s: 0.7rem;
 
             --font-1: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            --box-shadow: inset 0 0 1.5em 0;
 
         }
 
@@ -55,8 +57,9 @@
         h3{font-size: var(--fs-m);}
 
 
-        p{
+        p, li{
             font-weight: 300;
+            font-size: var(--fs-rgl);
         }
 
         html{
@@ -73,10 +76,15 @@
             margin: 7em auto;
             border-radius: 1em;
             padding: 2em 5em;
+            box-shadow: var(--box-shadow) var(--color-2);
         }
 
         table{
             margin-top: -4em;
+        }
+
+        #order{
+            text-transform: capitalize;
         }
 
         #track-btn{
@@ -108,6 +116,8 @@
             border-radius: 1em;
             background-color: var(--color-3);
             padding: 2em;
+            box-shadow: var(--box-shadow) var(--color-2);
+
         }
 
         /* LOGO */
@@ -119,6 +129,7 @@
             border-radius: 50%!important;
             margin-inline: auto;
             transform: translateY(-60%);
+            box-shadow: var(--box-shadow) var(--color-2);
         }
 
         #logo{
@@ -158,10 +169,10 @@
         <tr id="order">
             <td><h3>Order Summary</h3>
                 <ol>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>lorem ipsum dolor sit</li>
+                    <li>amet consectetur</li>
+                    <li>adipisicing elit (iusto blanditiis)</li>
+                    <li>itaque veniam</li>
                 </ol>
             </td>
         </tr>

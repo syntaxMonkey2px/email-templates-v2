@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enterprise-1</title>
+</head>
+<body>
+    <style>
+        :root{
+            --color-1: #00171f;
+            --color-2: #023E82;
+            --color-3: #003459;
+            --color-4: #f0f0f0;
+            --color-5: #9fe2f0;
+
+            --fs-xl: 4rem;
+            --fs-l: 1.6rem;
+            --fs-m: 1.2rem;
+            --fs-rgl: 1rem;
+            --fs-s: 0.7rem;
+
+            --font-1: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            --box-shadow-1: 0 0 1em 0 var(--color-1);
+            --box-shadow-2: 0 0 1em 0 var(--color-5);
+
+
+
+        }
+
+        @media (min-width: 100px) and (max-width: 599px) {
+            :root{
+                --fs-xl: 2.2rem;
+                --fs-l: 1.4rem;
+                --fs-m: 1.1rem;
+                --fs-rgl: 0.95rem;
+                --fs-s: 0.7rem;
+
+                --box-shadow-1: 0 0 0.5em 0 var(--color-1);
+            }
+
+            body main{
+                width: 100%;
+                margin-bottom: 5em;
+            }
+
+            body main>*{
+                margin: 3em auto;
+                box-sizing: border-box;
+            }
+
+            body .header{
+                display: block;
+                padding-top: 1em;
+            }
+
+            body #header img{
+                display: block;
+                width: 100%;
+                height: auto;
+                padding-top: 3em;
+            }
+
+            body #feature-container{
+                /* width: 100vw; */
+                display: block;
+                padding: 0 5vw;
+            }
+
+
+            body .features-benefits{
+                padding-left: 0px;
+                margin: 0 auto;
+            }
+            
+            main form{
+                width: 79%;
+            }
+
+            .cta{
+                width: 100%;
+                margin: 0;
+                padding: 3em 0;
+            }
+
+            main #cta-message{
+                padding: 0 5vw;
+            }
+
+            main .curve::before{
+            transform: translateY(-150%);
+        }
+
+            main .curve::after{
+            transform: translateY(50%);
+
+        }
+
+        }
+
+        h1{font-size: var(--fs-xl);}
+        h2{font-size: var(--fs-l);}
+        h3{font-size: var(--fs-m);}
+        p{font-size: var(--fs-rgl);}
+
+
+        h1, h2, h3{
+            color: var(--color-3);
+        }
+
+        
+
+        html>*{
+            box-sizing: border-box;
+            font-family: var(--font-1);
+        }
+
+        body{
+            width: 100vw;
+            background-color: var(--color-4);
+            box-shadow: inset 0 0 0em 0 var(--color-3);
+        }
+
+        main>*{
+            padding: 10em 0;
+
+        }
+
+        main{
+            width: 100%;
+            margin-inline: auto;
+        }
+
+        .header{
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            width: 100%;
+            /* margin-inline: auto; */
+            background-color: var(--color-2);
+            padding: 10vh 5vw 0vh 5vw;
+
+        }
+
+        #header h1{
+            flex-basis: 55%;
+            text-transform: capitalize;
+            color: var(--color-4);
+            padding-right: 1em;
+            /* text-shadow:  0 0 0.7em var(--color-5); */
+        }
+
+        #header img{
+            flex-basis: 35%;
+            width: auto;
+            height: 40vh;
+            filter:hue-rotate(270deg);
+        }
+
+        /* FEATURE */
+
+        #feature-container{
+            display: flex;
+            position: relative;
+            /* justify-content: space-evenly; */
+            width: 85vw;
+            margin: 2.7em auto;
+        }
+
+        #feature-img{
+            flex-basis: 55%;
+            width: 100%;
+            background: url(img/responsive-1.png) no-repeat;
+            background-size: contain;
+            margin-top: 5em
+        }
+
+        .features-benefits{
+            flex-basis: 45%;
+            display: block;
+            width: 100%;
+            line-height: 1.1;
+            color: var(--color-3);
+        }
+
+        .features-benefits p{
+            color: var(--color-1);
+            font-size: var(--fs-rgl);
+        }
+
+
+        .feature{
+            width: 90%;
+            margin-inline: auto;
+            list-style: var(--color-3);
+        }
+
+
+        .feature-keypoint{
+            color: var(--color-3);
+            font-weight: 600;
+        }
+
+
+        /* TEMPLATE */
+
+        #template-container{
+            width: 100%;
+            position: relative;
+            background-color: var(--color-2);
+            margin-inline: auto;;
+            padding: 0!important;
+            margin-bottom: 10em;
+
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
+            gap: 1em;
+            
+            cursor: all-scroll;
+
+            z-index: 1;
+        }
+
+
+        .template{
+            flex-basis: 100%;
+            min-width: 350px;
+            height: 25em;
+            min-height: 100%;
+            overflow: hidden;
+        }
+
+        .template:hover{
+            /* transform: translateY(-10%); */
+        }
+
+        .template:hover img{
+            box-shadow: var(--box-shadow-2);
+        }
+
+        .template img{
+
+            width: 90%;
+            height: auto;
+            object-fit: cover;
+            margin-inline: auto;
+            box-shadow: var(--box-shadow-1);
+
+        }
+
+        /* CTA */
+
+        #cta-message{
+            padding: 0 5em ;
+        }
+
+        #cta-message h2{
+            margin-top: 0;
+        }
+
+        /* FORM */
+        form, button{
+            font-family: var(--font-1);
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 77%;
+            min-width: 300px;
+            padding: 2.7em;
+            box-shadow: var(--box-shadow-1);
+            margin-inline: auto;
+            color: var(--color-4);
+            background-color: var(--color-2);
+            margin: 5em auto;
+        }
+
+        form>*{
+            margin: 0.4em 0;
+        }
+
+        form>*:not(label){
+            border: none;
+            background-color:azure;
+        }
+
+    
+
+        button{
+            width: 7em;
+            height: 3em;
+            cursor: pointer;
+            font-size: var(--fs-rgl);
+        }
+
+        .h-captcha-wrapper{
+            display: grid;
+            place-items: center;
+        }
+
+        /* FOOTER */
+
+        footer{
+            display: block;
+            background-color: var(--color-2);
+            padding: 3em;
+        }
+
+        footer p{
+            color: var(--color-4);
+            font-size: var(--fs-s);
+            font-family: var(--font-1);
+            text-align: justify;
+            width: 80%;
+            margin-inline: auto;
+        }
+
+        /* /ELEMENTS/ */
+
+        /* .curve{
+            position: absolute;
+            height: 14.7em;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+
+        } */
+
+        /* .curve::before{
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 57%;
+            height: 100%;
+            background-color: var(--color-4);
+            transform: translate(85%, 60%);
+            box-shadow: inset 0 10px 7px -10px rgba(0, 0, 0, 0.7);
+
+
+            padding: 0!important;
+
+        } */
+
+        .curve::before{
+            content: '';
+            position: absolute;
+            border-bottom-left-radius: 20% 10%;
+            border-bottom-right-radius: 100% 100%;
+            width: 100%;
+            height: 10em;
+            background-color: var(--color-2);
+            transform: translateY(-100%);
+            box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.7);
+            padding: 0!important;
+        }
+
+        .curve::after{
+            content: '';
+            position: absolute;
+
+            border-top-left-radius: 70% 50%;
+            border-top-right-radius: 50% 100%;
+            width: 100%;
+            height: 10em;
+            background-color: var(--color-2);
+            transform: translateY(0%);
+            /* box-shadow: 0 -5px 10px 5px rgba(0, 0, 0, 0.7); */
+            padding: 0!important;
+            z-index: 2;
+        }
+
+        .curve2::after{
+            content: '';
+            position: absolute;
+            border-bottom-left-radius: 20% 10%;
+            border-bottom-right-radius: 100% 100%;
+            width: 100%;
+            height: 10em;
+            background-color: var(--color-2);
+            transform: translateY(-100%);
+            box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.7);
+        }
+        
+        .curve2{
+            padding: 0!important;
+        }
+
+
+    </style>
+    <div id="header" class="header">
+        <h1>email templates</h1>
+        <img src="img/computer.png" id="header-img" class="info-img" width="1280" height="906" alt="">
+        <!-- <div class="curve"></div> -->
+    </div>
+    <main>
+        <div class="curve">
+            <div id="feature-container">
+                <div id="feature-img"></div>
+                <ul class="features-benefits">
+                    <h2>Features & Benefits</h2>
+                        <li class="feature">
+                            <p><span class="feature-keypoint">Mobile-Ready</span>
+                         - Stunning on any device—phones, tablets, or computers.</p>
+                        </li>
+                        <li class="feature">
+                            <p><span class="feature-keypoint">Customizable</span>
+                         - Easily adjust colors, fonts, and layouts to match your brand.</p>
+                        </li>
+                        <li class="feature">
+                            <p><span class="feature-keypoint">Compatible</span>
+                         - Works seamlessly with Mailchimp, Constant Contact, and more.</p>
+                        </li>
+                        <li class="feature">
+                            <p><span class="feature-keypoint">Professional Design</span>
+                         - Modern templates that captivate and engage your audience.</p>
+                        </li>
+                        <li class="feature">
+                            <p><span class="feature-keypoint">Performance Focus</span>
+                         - Faster load times, higher open rates, more clicks, better results.</p>
+                        </li>
+                </ul>
+            </div>
+        </div>
+        <div class="curve2">
+            <div id="template-container">
+                <div id="template-e1a" class="template">
+                    <a href="enterprise-1b/index.html"><img src="img/enterprise-1b-desktop.png" alt=""></a>
+                </div>
+                <div id="template-e1b" class="template">
+                    <a href="enterprise-1a/index.html"><img src="img/enterprise-1a-desktop.png" alt=""></a>
+                </div>
+                <div id="template-e1c" class="template">
+                    <a href="enterprise-1c/index.html"><img src="img/enterprise-1c-desktop.png" alt=""></a>
+                </div>
+                <div id="template-e2b" class="template">
+                    <a href="enterprise-2b/index.html"><img src="img/enterprise-2b-desktop.png" alt=""></a>
+                </div>
+                <div id="template-e2c" class="template">
+                    <a href="enterprise-2c/index.html"><img src="img/enterprise-2c-desktop.png" alt=""></a>
+                </div>
+                <div id="template-e2a" class="template">
+                    <a href="enterprise-2a/index.html"><img src="img/enterprise-2a-desktop.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <section class="cta">
+            <div id="cta-message">
+                <h2>Get Started</h2>
+                <h3>Ready to Elevate Your Email Campaigns?</h3>
+                <p>Whether you have questions, need custom designs, or want to get started with our templates, we're here to help. Reach out to us, and let's create stunning emails together!<br><br>Fill out the form below, and we'll get back to you as soon as possible.</p>
+                
+            </div>
+            <form action="https://api.web3forms.com/submit" method="POST" id="cta">
+                <input type="hidden" name="access_key" value="d63bc9d1-55c2-4686-a2fd-c99c53d6d196">
+                <label for="name">name</label>
+                <input type="text" id="name" name="name">
+                <label for="email">email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">message</label>
+                <textarea rows="10" id="message" name="message" required></textarea>
+                    <!-- hCaptcha Spam Protection -->
+                <div class="h-captcha-wrapper">
+                    <div class="h-captcha" data-captcha="true"></div>
+                </div>
+                <button>submit</button>
+            </form>
+        </section>
+        <!-- Required for hCaptcha -->
+        <script src="https://web3forms.com/client/script.js" async defer>
+
+
+            const form = document.getElementById('form');
+            const result = document.getElementById('result');
+            
+            form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              const formData = new FormData(form);
+              const object = Object.fromEntries(formData);
+              const json = JSON.stringify(object);
+              result.innerHTML = "Please wait..."
+            
+                fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                    .then(async (response) => {
+                        let json = await response.json();
+                        if (response.status == 200) {
+                            result.innerHTML = "Form submitted successfully";
+                        } else {
+                            console.log(response);
+                            result.innerHTML = json.message;
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        result.innerHTML = "Something went wrong!";
+                    })
+                    .then(function() {
+                        form.reset();
+                        setTimeout(() => {
+                            result.style.display = "none";
+                        }, 3000);
+                    });
+            });
+        </script>            
+    </main>
+    <footer>
+        <p>Copyright © 2024 Lia Siu. All rights reserved. <br><br>
+        <span class="disclaimer">
+            This website/portfolio is intended for showcasing my work on email marketing solutions. <br><br>
+            The information contained on this website is for general information purposes only. Lia Siu assumes no responsibility for errors or omissions in the contents of the website. <br><br>
+            Any mention of third-party products, services, or websites is for informational purposes only and does not imply endorsement or recommendation. <br><br>
+        </span>
+    </footer>
+</ - bo    /html>
