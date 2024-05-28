@@ -106,10 +106,11 @@
         h1{font-size: var(--fs-xl);}
         h2{font-size: var(--fs-l);}
         h3{font-size: var(--fs-m);}
+        h4{font-size: var(--fs-rgl);}
         p{font-size: var(--fs-rgl);}
 
 
-        h1, h2, h3{
+        h1, h2, h3, h4{
             color: var(--color-3);
         }
 
@@ -155,6 +156,12 @@
             /* text-shadow:  0 0 0.7em var(--color-5); */
         }
 
+        #header h4{
+            color: var(--color-4);
+            font-style: italic;
+            font-weight: 400;
+        }
+
         #header img{
             flex-basis: 35%;
             width: auto;
@@ -184,26 +191,19 @@
             flex-basis: 45%;
             display: block;
             width: 100%;
-            line-height: 1.1;
+            line-height: 1.4;
             color: var(--color-3);
         }
 
-        .features-benefits p{
-            color: var(--color-1);
-            font-size: var(--fs-rgl);
+        .features{
+            padding-left: 1em;
         }
 
 
         .feature{
-            width: 90%;
+            width: 100%;
             margin-inline: auto;
             list-style: var(--color-3);
-        }
-
-
-        .feature-keypoint{
-            color: var(--color-3);
-            font-weight: 600;
         }
 
 
@@ -415,16 +415,37 @@
 
     </style>
     <div id="header" class="header">
-        <h1>email templates</h1>
+        <div>
+            <h1>email templates</h1>
+            <h4>Hand-Coded for Impact: Mobile-Ready Emails That Convert</h4>
+        </div>
         <img src="img/computer.png" id="header-img" class="info-img" width="1280" height="906" alt="">
-        <!-- <div class="curve"></div> -->
     </div>
     <main>
         <div class="curve">
             <div id="feature-container">
                 <div id="feature-img"></div>
                 <ul class="features-benefits">
-                    <h2>Features & Benefits</h2>
+                    <p>Our HTML/CSS templates are hand-coded from scratch, ensuring clean code, full control, and efficiency, which translates to mobile-ready emails that load faster, look stunning on any device, and drive results.</p>
+
+                    <p><strong>Here's what you get:</strong></p>
+                    
+                    <ul class="features">
+                      <li class="feature"><strong>Customize colors, fonts, and layouts</strong> to match your brand perfectly.</li>
+                      <li class="feature"><strong>Enjoy complete control </strong> over every element of your email.</li>
+                      <li class="feature"><strong>Benefit from clean code</strong>  for better deliverability and fewer issues.</li>
+                      <li class="feature"><strong>Experience faster load times</strong>  for a better user experience.</li>
+                      <li class="feature"><strong>Reach your audience on any device</strong> with automatic mobile responsiveness.</li>
+                    </ul>
+                    
+                    <p><strong>Combining the power of hand-coded design with the convenience of mobile-ready responsiveness,</strong> our templates empowers you to create impactful emails that resonate with your audience and achieve your marketing goals.</p>
+
+
+                        <!-- <li class="feature">
+                            <p><span class="feature-keypoint">Built from Scratch with HTML/CSS</span>
+                        - Our HTML/CSS templates are hand-coded from scratch, ensuring clean code, full control, and efficiency. This translates to mobile-ready emails that load faster, look stunning on any device, and drive results.
+                        
+                        </li>
                         <li class="feature">
                             <p><span class="feature-keypoint">Mobile-Ready</span>
                          - Stunning on any device—phones, tablets, or computers.</p>
@@ -444,8 +465,8 @@
                         <li class="feature">
                             <p><span class="feature-keypoint">Performance Focus</span>
                          - Faster load times, higher open rates, more clicks, better results.</p>
-                        </li>
-                </ul>
+                        </li> -->
+                    <!-- </ul> -->
             </div>
         </div>
         <div class="curve2">
