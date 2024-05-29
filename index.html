@@ -54,21 +54,21 @@
             }
 
             body .header{
+                padding: var(--padding-master-width);
                 display: block;
-                padding-top: 1em;
             }
 
-            body #header img{
+            body #header-img{
                 display: block;
                 width: 100%;
-                height: auto;
+                height: 100%;
                 padding-top: 3em;
             }
 
             body .feature-container{
-                /* width: 100vw; */
+                box-sizing: border-box;
+                width: 100%;
                 display: block;
-                width: ;
                 padding: 0 5vw;
             }
 
@@ -76,6 +76,10 @@
             body .features-benefits{
                 padding-left: 0px;
                 margin: 0 auto;
+            }
+
+            body #feature-img{
+                display: none;
             }
             
             main form{
@@ -108,9 +112,12 @@
         }
 
         @media (min-width: 600px) and (max-width:860px){
-            
+
+            body .header{
+            }
+        
             body #header-heading{
-                flex-basis: 65%;
+                flex-basis: 65%
             }
 
             body #header-img{
@@ -210,7 +217,7 @@
             display: flex;
             position: relative;
             gap: 2em;
-            width: clamp(700px, 80%, 1200px);
+            width: clamp(300px, 80%, 1200px);
             margin: 2.7em auto;
         }
 
@@ -381,32 +388,6 @@
             margin-inline: auto;
         }
 
-        /* /ELEMENTS/ */
-
-        /* .curve{
-            position: absolute;
-            height: 14.7em;
-            width: 100%;
-            left: 0;
-            bottom: 0;
-
-        } */
-
-        /* .curve::before{
-            content: '';
-            display: block;
-            position: absolute;
-            border-radius: 100% 50%;
-            width: 57%;
-            height: 100%;
-            background-color: var(--color-4);
-            transform: translate(85%, 60%);
-            box-shadow: inset 0 10px 7px -10px rgba(0, 0, 0, 0.7);
-
-
-            padding: 0!important;
-
-        } */
 
         .curve::before{
             content: '';
@@ -462,11 +443,10 @@
         <img src="img/computer.png" id="header-img" class="info-img" width="1280" height="906" alt="">
     </div>
     <main>
-        <div class="curve">
-            <div id="feature-section">
-                <div class="feature-container">
-                    <div id="feature-img"></div>
-                    <div class="features-benefits">
+        <div class="curve feature-section">
+            <div class="feature-container">
+                <div id="feature-img"></div>
+                <div class="features-benefits">
                         <p>Our email templates are hand-crafted to be<strong> mobile-friendly, customizable, and built for results.</strong></p>
                         <p><strong>Here's what you get:</strong></p>
                     
@@ -479,10 +459,7 @@
                         </ul>
                     
                         <p><strong>Get the best of both worlds: productive design and mobile-ready convenience.</strong></p>
-                    </div>
                 </div>
-
-                   
             </div>
         </div>
         <div class="curve2">
