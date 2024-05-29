@@ -25,7 +25,8 @@
             --box-shadow-1: 0 0 1em 0 var(--color-1);
             --box-shadow-2: 0 0 1em 0 var(--color-5);
 
-
+            --padding-master-width: 3em;
+            --padding-master-height: 10em;
 
         }
 
@@ -38,6 +39,8 @@
                 --fs-s: 0.7rem;
 
                 --box-shadow-1: 0 0 0.5em 0 var(--color-1);
+
+
             }
 
             body main{
@@ -65,6 +68,7 @@
             body .feature-container{
                 /* width: 100vw; */
                 display: block;
+                width: ;
                 padding: 0 5vw;
             }
 
@@ -103,6 +107,34 @@
 
         }
 
+        @media (min-width: 600px) and (max-width:860px){
+            
+            body #header-heading{
+                flex-basis: 65%;
+            }
+
+            body #header-img{
+                flex-basis: 35%;
+                width: 100%;
+                height: 100%;
+                margin: auto;
+            }
+
+
+
+            body .feature-container{
+                width: 85vw;
+            }
+
+            body #feature-img{
+                flex-basis: 45%;
+                }
+
+            body .features-benefits{
+                flex-basis: 55%;
+            }
+        }
+
         h1{font-size: var(--fs-xl);}
         h2{font-size: var(--fs-l);}
         h3{font-size: var(--fs-m);}
@@ -128,7 +160,7 @@
         }
 
         main>*{
-            padding: 10em 0;
+            padding: var(--padding-master-height) 0;
 
         }
 
@@ -142,17 +174,20 @@
             box-sizing: border-box;
             display: flex;
             width: 100%;
-            /* margin-inline: auto; */
+            margin-inline: auto;
             background-color: var(--color-2);
-            padding: 10vh 5vw 0vh 5vw;
-
+            padding: calc(var(--padding-master-height)/2) calc(var(--padding-master-width)*2) 0 calc(var(--padding-master-width)*2);
+            gap: 2em;
         }
 
-        #header h1{
+        #header-heading{
             flex-basis: 55%;
+        }
+        
+        #header h1{
             text-transform: capitalize;
             color: var(--color-4);
-            padding-right: 1em;
+            line-height: 1;
             /* text-shadow:  0 0 0.7em var(--color-5); */
         }
 
@@ -162,11 +197,11 @@
             font-weight: 400;
         }
 
-        #header img{
+        #header-img{
             flex-basis: 35%;
             width: auto;
             height: 40vh;
-            filter:hue-rotate(270deg);
+            filter:hue-rotate(200deg);
         }
 
         /* FEATURE */
@@ -175,21 +210,22 @@
             display: flex;
             position: relative;
             gap: 2em;
-            /* justify-content: space-evenly; */
-            width: 85vw;
+            width: clamp(700px, 80%, 1200px);
             margin: 2.7em auto;
         }
 
         #feature-img{
-            flex-basis: 55%;
+            flex-basis: 50%;
             width: 100%;
+            height: auto;
             background: url(img/responsive-1.png) no-repeat;
             background-size: contain;
-            margin-top: 5em
+            margin: 5em auto 0 auto;
+
         }
 
         .features-benefits{
-            flex-basis: 45%;
+            flex-basis: 50%;
             display: block;
             width: 100%;
             line-height: 1.4;
@@ -245,9 +281,10 @@
         }
 
         #template-heading{
-            padding: 0 2em 2em 2em;
+            padding: 0 var(--padding-master-width);
             min-width: 200px!important;
-
+            width: 80%;
+            margin-inline: auto;
         }
 
         #template-heading>*{
@@ -275,7 +312,9 @@
         /* CTA */
 
         #cta-message{
-            padding: 0 5em ;
+            width: 80%;
+            margin-inline: auto;
+            padding: 0 var(--padding-master-width) ;
         }
 
         #cta-message h2{
@@ -292,9 +331,9 @@
         form{
             display: flex;
             flex-direction: column;
-            width: 77%;
+            width: 80%;
             min-width: 300px;
-            padding: 2.7em;
+            padding: var(--padding-master-width);
             box-shadow: var(--box-shadow-1);
             margin-inline: auto;
             color: var(--color-4);
@@ -330,7 +369,7 @@
         footer{
             display: block;
             background-color: var(--color-2);
-            padding: 3em;
+            padding: var(--padding-master-width);
         }
 
         footer p{
@@ -416,7 +455,7 @@
 
     </style>
     <div id="header" class="header">
-        <div>
+        <div id="header-heading">
             <h1>email templates</h1>
             <h4>Hand-Coded for Impact: Mobile-Ready Emails That Convert</h4>
         </div>
