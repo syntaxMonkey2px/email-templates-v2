@@ -217,8 +217,31 @@
             margin-left: 4em;
         }
 
+        #back-btn{
+            display: block;
+            position: fixed;
+            top: 7.7vh;
+            right: 0;
+            background-color: var(--color-1);
+            color: var(--color-4);
+            font-weight: 500;
+            font-size: var(--fs-rgl);
+            padding: 1.5em;
+            border: none;
+            border-radius: 100vw 0 0 100vw;
+            box-shadow: 0 0 .5em .02em var(--color-1);
+            z-index: 1000;
+            cursor: pointer;
+            transition: 50ms;
+        }
+
+        #back-btn:hover{
+            padding: 1.5em 3em 1.5em 1.5em;
+        }
+
     </style>
-    <table>
+    <a href="../../index.html#template-section"><button id="back-btn">Back</button></a>
+        <table>
         <tr id="logo-wrapper" class="footer">
             <td id="data-logo">
                 <img src="icon/logoipsum.svg" id="logo"></td>
